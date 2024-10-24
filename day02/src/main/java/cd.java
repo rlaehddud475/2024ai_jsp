@@ -1,3 +1,0 @@
-@D
-public class cd {
-}
