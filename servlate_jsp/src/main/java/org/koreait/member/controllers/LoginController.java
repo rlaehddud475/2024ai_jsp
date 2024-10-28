@@ -1,6 +1,7 @@
 package org.koreait.member.controllers;
 
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,8 +18,13 @@ public class LoginController extends HttpServlet {
     }
 
     @Override
-    public void init() throws ServletException{
+    public void init(ServletConfig config) throws ServletException{
         //ServletConfig의 주요 메서드 : 설정값 조회 메서드
+        //String getInitParameter(String name);
+    String key1=config.getInitParameter("key1");
+    String key2=config.getInitParameter("key2");
+        System.out.printf("key1=%s%n",key1);
+        System.out.printf("key2=%s%n",key2);
     }
 /*    public void init() throws ServletException {
         System.out.println("서블릿 객체가 생성되면 최초 1번 실행");//설정 값을 조회할때 최초 1번만 조회후 서블릿 객체 내에서 유지..., 최초 유입 로그...
