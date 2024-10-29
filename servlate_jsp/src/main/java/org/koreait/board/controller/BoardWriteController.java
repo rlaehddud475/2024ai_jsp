@@ -16,5 +16,7 @@ public class BoardWriteController extends HttpServlet {
         resp.setContentType("text/html; charset=UTF-8 ");
         PrintWriter out = resp.getWriter();
         out.write("<h1>글쓰기</h1>");
+        String key1=req.getParameter("key1");
+        System.out.printf("key1=%s%n", key1);
     }
 }
