@@ -5,14 +5,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
 
 public class CommonRequestWrapper extends HttpServletRequestWrapper {
-    @Override
-    public String getParameter(String name) {
-        String value  = super.getParameter(name);
-        if (value!=null&&value.isBlank()){
-          value=  String.format("**%s**", value);
-        }
-        return value;
-    }
+//    @Override
+//    public String getParameter(String name) {
+//        String value  = super.getParameter(name);
+//        if (value!=null&&value.isBlank()){
+//          value=  String.format("**%s**", value);
+//        }
+//        return value;
+//    }
 
     public CommonRequestWrapper(ServletRequest request) {
         super((HttpServletRequest) request);
