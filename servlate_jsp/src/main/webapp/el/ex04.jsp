@@ -6,3 +6,6 @@ JSESSIONID : ${cookie.JSESSIONID.getValue()}<br>
 initParam.key1 : ${initParam.key1}<br>
 initParam.key2 : ${initParam.key2}<br>
 RequestURI : ${pageContext.request.requestURI}<br>
+
+EL식 연산자<br>
+${    empty param.message?"없음":"있음"}<br>
